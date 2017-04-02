@@ -7,7 +7,7 @@ depends = 'context_filetype.vim'
 if = "has('nvim')"
 on_i = 1
 hook_source = '''
-source ~/vimfiles/rc/nvim/plugins/deoplete.rc.vim
+source ~/dotfiles/.vim/rc/nvim/plugins/deoplete.rc.vim
 '''
 
 [[plugins]]
@@ -16,7 +16,7 @@ depends = 'context_filetype.vim'
 if = "has('lua')"
 on_i = 1
 hook_source = '''
-source ~/vimfiles/rc/plugins/neocomplete.rc.vim
+source ~/dotfiles/.vim/rc/plugins/neocomplete.rc.vim
 '''
 
 [[plugins]]

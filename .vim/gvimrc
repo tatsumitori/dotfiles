@@ -26,7 +26,7 @@ set guifontwide=MS_Gothic:h10
 
 
 " カラースキームの設定
-colorscheme molokai
+" colorscheme molokai
 
 
 " 現在の行を強調表示

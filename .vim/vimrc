@@ -1,5 +1,5 @@
 " profile start profile.txt
-" profile file ~/.vim/rc/*
+" profile file ~/dotfiles/.vim/rc/*
 " profile func dein#*
 
 " .vimrc 始めの辺りに書く
@@ -11,11 +11,14 @@ if &compatible
   set nocompatible
 endif
 
+" vimprocのDLLを最新に更新する
+let g:vimproc#download_windows_dll = 1
+
 " パス設定
 function! s:source_rc(path, ...) abort "{{{
   let use_global = get(a:000, 0, !has('vim_starting'))
   " let abspath = resolve(expand('~/.vim/rc/' . a:path))
-  let abspath = resolve(expand('~/.vim/rc/' . a:path))
+  let abspath = resolve(expand('~/dotfiles/.vim/rc/' . a:path))
   if !use_global
     execute 'source' fnameescape(abspath)
     return
