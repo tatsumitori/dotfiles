@@ -40,7 +40,7 @@ set columns=120
 set lines=24
 
 " ウィンドウ位置の指定
-winpos 250 320
+winpos 150 150
 
 " --- 見た目系 ---
 " ルーラの表示
@@ -54,15 +54,17 @@ set ambiwidth=double
 " 現在の行を強調表示
 set cursorline
   " カレントウィンドウにのみ罫線を引く
-  augroup cch
-    autocmd! cch
+  " augroup cch
+  augroup MyAutoCmd
+    " autocmd! cch
     autocmd WinLeave * set nocursorline
     autocmd WinEnter,BufRead * set cursorline
   augroup END
-hi clear CursorLine
-hi CursorLine gui=underline
+
+highlight clear CursorLine
+highlight CursorLine gui=underline
 " highlight CursorLine ctermbg=black guibg=black
-hi CursorLine cterm=underline,reverse ctermbg=darkgray
+highlight CursorLine cterm=underline,reverse ctermbg=darkgray
 
 " 現在の行を強調表示（縦）
 set cursorcolumn
@@ -151,7 +153,6 @@ set hlsearch
 " vim-css3-syntaxの設定 ---------------------------------------------------------------
 augroup VimCSS3Syntax
   autocmd! VimCSS3Syntax
-
   autocmd FileType css setlocal iskeyword+=-
 augroup END
 

@@ -23,7 +23,7 @@ nnoremap gj j
 nnoremap gk k
 
 " システムメニュー呼び出し(windows)
-map <M-Space> :simalt ~<CR>
+map <silent> <M-Space> :simalt ~<CR>
 
 " フォント設定呼び出し
 " nnoremap <Space>z :set guifont=*<CR>

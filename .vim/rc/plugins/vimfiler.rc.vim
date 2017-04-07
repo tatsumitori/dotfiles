@@ -11,6 +11,7 @@ let g:vimfiler_as_default_explorer = 1
 nnoremap [VimFiler] <Nop>
 nmap <Space>f [VimFiler]
 nnoremap [VimFiler]  :<C-u>VimFiler
+nnoremap [VimFiler]f :<C-u>VimFiler<CR>
 nnoremap [VimFiler]b :<C-u>VimFilerBufferDir -quit -status<CR>
 nnoremap [VimFiler]t :<C-u>VimFilerBufferDir -quit -status -tab<CR>
 nnoremap [VimFiler]n :<C-u>VimFilerExplorer -find -status<CR>

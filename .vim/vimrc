@@ -2,14 +2,13 @@
 " profile file ~/dotfiles/.vim/rc/*
 " profile func dein#*
 
-" .vimrc 始めの辺りに書く
-" 一旦ファイルタイプ関連を無効化する
-filetype off
-
 " Vi互換をオフ
 if &compatible
   set nocompatible
 endif
+
+" 一旦ファイルタイプ関連を無効化する
+filetype off
 
 " vimprocのDLLを最新に更新する
 let g:vimproc#download_windows_dll = 1
@@ -103,10 +102,6 @@ if !has('vim_starting')
   call dein#call_hook('source')
   call dein#call_hook('post_source')
 
-  " シンタックスハイライトの設定
-  syntax enable
-  " ファイルタイプ関連を有効にする
-  filetype plugin indent on
 endif
 
 
@@ -134,4 +129,9 @@ call s:source_rc('keymap.rc.vim')
 " if !has('nvim') && has('gui')
 "   call s:source_rc('gui.rc.vim')
 " endif
+
+" シンタックスハイライトの設定
+syntax enable
+" ファイルタイプ関連を有効にする
+filetype plugin indent on
 
