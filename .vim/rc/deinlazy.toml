@@ -7,7 +7,7 @@ depends = 'context_filetype.vim'
 if = "has('nvim')"
 on_i = 1
 hook_source = '''
-source ~/dotfiles/.vim/rc/nvim/plugins/deoplete.rc.vim
+source ~/dotfiles/.vim/rc/plugins/deoplete.rc.vim
 '''
 
 [[plugins]]
@@ -64,6 +64,12 @@ repo = 'osyo-manga/vim-precious'
 depends = 'context_filetype.vim'
 on_ft = ['vim', 'html', 'toml']
 
+[[plugins]]
+repo = 'kien/rainbow_parentheses.vim'
+on_ft = 'clojure'
+hook_source = '''
+source ~/dotfiles/.vim/rc/plugins/rainbow_parentheses.rc.vim
+'''
 
 # ==========================================================
 # lang
@@ -155,4 +161,22 @@ on_ft = 'swift'
 [[plugins]]
 repo = 'posva/vim-vue'
 on_ft = 'vue'
+
+[[plugins]]
+repo = 'guns/vim-clojure-static'
+on_ft = 'clojure'
+hook_source = '''
+let g:clojure_align_multiline_strings = 1
+'''
+
+[[plugins]]
+repo = 'tpope/vim-fireplace'
+on_ft = 'clojure'
+
+[[plugins]]
+repo = 'guns/vim-clojure-highlight'
+on_ft = 'clojure'
+hook_source = '''
+let g:clojure_highlight_references = 1
+'''
 

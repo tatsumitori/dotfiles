@@ -150,6 +150,13 @@ set wrapscan
 set hlsearch
 
 
+" --- 印刷設定 ---
+" set background=light
+set printoptions=number:y,header:0,syntax:y,left:5pt,right:5pt,top:10pt,bottom:10pt
+set printfont=Consolas:h8
+set printmbfont=r:MS_Mincho:h8,b:MS_Gothic:h8
+
+
 " vim-css3-syntaxの設定 ---------------------------------------------------------------
 augroup VimCSS3Syntax
   autocmd! VimCSS3Syntax

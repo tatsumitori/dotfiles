@@ -113,6 +113,9 @@ call s:source_rc('options.rc.vim')
 " キーマップ設定ファイルのロード
 call s:source_rc('keymap.rc.vim')
 
+" コマンド設定ファイルのロード
+call s:source_rc('command.rc.vim')
+
 " nvimの場合
 " if has('nvim')
 "   call s:source_rc('neovim.rc.vim')
@@ -129,6 +132,9 @@ call s:source_rc('keymap.rc.vim')
 " if !has('nvim') && has('gui')
 "   call s:source_rc('gui.rc.vim')
 " endif
+
+" Alignの設定
+let g:Align_xstrlen = 3
 
 " シンタックスハイライトの設定
 syntax enable
