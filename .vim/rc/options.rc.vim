@@ -84,9 +84,6 @@ set laststatus=2
 set wildmenu
 " コマンドラインの補完
 set wildmode=list:longest
-" 折り返し時に表示行単位での移動できるようにする
-nnoremap j gj
-nnoremap k gk
 " カーソルの回り込みができるようになる
 set whichwrap=b,s,[,],<,>
 " バックスペースを、空白、行末、行頭でも使えるようにする
