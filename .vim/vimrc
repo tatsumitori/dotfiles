@@ -108,6 +108,24 @@ endif
 
 " ---------------------------------------------------------------------
 
+" OS別
+if has("mac")
+  " mac用の設定
+  " call s:source_rc('mac.rc.vim')
+elseif has("unix")
+  " unix固有の設定
+  call s:source_rc('unix.rc.vim')
+elseif has("win64")
+  " 64bit_windows固有の設定
+  call s:source_rc('win64.rc.vim')
+elseif has("win32unix")
+  " Cygwin固有の設定
+  " call s:source_rc('win32unix.rc.vim')
+elseif has("win32")
+  " 32bit_windows固有の設定
+  " call s:source_rc('win32.rc.vim')
+endif
+
 " オプション設定ファイルのロード
 call s:source_rc('options.rc.vim')
 
@@ -122,20 +140,10 @@ call s:source_rc('command.rc.vim')
 "   call s:source_rc('neovim.rc.vim')
 " endif
 
-" OS別
-" if IsWindows()
-"   call s:source_rc('windows.rc.vim')
-" else
-"   call s:source_rc('unix.rc.vim')
-" endif
-
 " GUI設定
 " if !has('nvim') && has('gui')
 "   call s:source_rc('gui.rc.vim')
 " endif
-
-" Alignの設定
-let g:Align_xstrlen = 3
 
 " シンタックスハイライトの設定
 syntax enable

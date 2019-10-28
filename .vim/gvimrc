@@ -22,8 +22,20 @@ winpos 155 280
 " フォントサイズの設定
 " set guifont=MS_Mincho:h10
 " set guifontwide=MS_Mincho:h10
-set guifont=MS_Gothic:h10
-set guifontwide=MS_Gothic:h10
+" OS別
+if has("mac")
+  " mac用の設定
+  set guifont=MS_Gothic:h10
+  set guifontwide=MS_Gothic:h10
+elseif has("unix")
+  " unix固有の設定
+  set guifont=Ricty\ Diminished\ 10
+  set guifontwide=Ricty\ Diminished\ 10
+elseif (has("win64") || has("win32unix") || ("win32"))
+  " Windows(64bit, 32bit)+Cygwinの設定
+  set guifont=MS_Gothic:h10
+  set guifontwide=MS_Gothic:h10
+endif
 
 
 " カラースキームの設定

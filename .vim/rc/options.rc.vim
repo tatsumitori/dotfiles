@@ -8,21 +8,8 @@
 " 文字コード指定(UTF-8)
 " set enc=UTF-8
 set fenc=UTF-8
-set tenc=UFT-8
-
-" --- BackUp ---
-" バックアップファイルを作らない
-" set nobackup
-" スワップファイルを作らない
-" set noswapfile
-" undoファイルを作らない
-" set noundofile
-" バックアップファイルを所定フォルダに作成するようにする
-set backupdir=$HOME\_vimbk\backup
-" スワップファイルを所定フォルダに作成するようにする
-set directory=$HOME\_vimbk\temp
-" undoファイルを所定フォルダに作成するようにする
-set undodir=$HOME\_vimbk\undo
+set ff=unix
+" set tenc=UFT-8
 
 " --- Input Setting
 " 編集中のファイルが変更されたら自動で読み直す
@@ -33,8 +20,6 @@ set hidden
 set showcmd
 " 折り返さない
 set nowrap
-" クリップボード共有指定
-set clipboard=unnamed
 " ウィンドウサイズの指定
 set columns=120
 set lines=24
@@ -161,5 +146,5 @@ augroup VimCSS3Syntax
 augroup END
 
 " カラースキームの設定
-" colorscheme molokai
+colorscheme molokai
 
