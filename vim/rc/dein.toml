@@ -1,0 +1,231 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# [[plugins]]
+# repo = 'godlygeek/csapprox'
+# if = "v:progname !=# 'gvim' && has('gui') && !has('nvim')"
+# hook_add = '''
+# " Convert colorscheme in Konsole.
+#  let g:CSApprox_konsole = 1
+#  let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+# '''
+
+# [[plugins]]
+# repo = 'thinca/vim-guicolorscheme'
+# if = "v:progname !=# 'gvim' && !has('gui') && !has('nvim')"
+
+
+# ==========================================================
+# color
+# ==========================================================
+
+[[plugins]]
+repo = 'tomasr/molokai'
+hook_add = '''
+let g:molokai_original=1
+let g:rehash256=1
+" colorscheme molokai
+au MyAutoCmd VimEnter * nested colorscheme molokai
+'''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+
+# ==========================================================
+# basic
+# ==========================================================
+
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+hook_add = '''
+source ~/dotfiles/vim/rc/plugins/anzu.rc.vim
+'''
+
+[[plugins]]
+repo = 'LeafCage/yankround.vim.git'
+hook_add = '''
+source ~/dotfiles/vim/rc/plugins/yankround.rc.vim
+'''
+
+[[plugins]]
+repo = 'mattn/webapi-vim'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'Shougo/vinarise.vim'
+on_cmd = 'Vinarise'
+
+[[plugins]]
+repo = 'rhysd/clever-f.vim'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+# [[plugins]]
+# repo = 'bronson/vim-trailing-whitespace'
+# hook_add = '''
+# let g:extra_whitespace_ignored_filetypes = ['unite', 'vimfiler']
+# '''
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'kana/vim-textobj-function'
+
+[[plugins]]
+repo = 'osyo-manga/vim-operator-search'
+depends = ['vim-operator-user', 'vim-textobj-function', 'vim-textobj-user']
+hook_add = '''
+nmap <Space>/ <Plug>(operator-search)if
+'''
+
+
+# ==========================================================
+# linter
+# ==========================================================
+
+[[plugins]]
+repo = 'neomake/neomake'
+if = "has('nvim')"
+hook_add = '''
+source ~/dotfiles/vim/rc/plugins/neomake.rc.vim
+'''
+
+#[[plugins]]
+#repo = 'benjie/neomake-local-eslint.vim'
+#if = "has('nvim')"
+#depends = 'neomake'
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+if = "!has('nvim')"
+hook_add = '''
+source ~/dotfiles/vim/rc/plugins/syntastic.rc.vim
+'''
+
+#[[plugins]]
+#repo = 'mtscout6/syntastic-local-eslint.vim'
+#if = "!has('nvim')"
+#depends = 'syntastic'
+#on_ft = 'javascript'
+
+
+# ==========================================================
+# filer
+# ==========================================================
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+hook_add = '''
+source ~/dotfiles/vim/rc/plugins/unite.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+depends = 'unite.vim'
+hook_add = '''
+source ~/dotfiles/vim/rc/plugins/vimfiler.rc.vim
+'''
+
+[[plugins]]
+repo = 'ujihisa/unite-colorscheme'
+
+# [[plugins]]
+# repo = 'Shougo/neobundle.vim'
+# hook_add = '''
+# nnoremap <C-n> :NERDTreeToggle<CR>
+# '''
+
+
+# ==========================================================
+# comment
+# ==========================================================
+[[plugins]]
+repo = 'tyru/caw.vim'
+
+
+# ==========================================================
+# browser
+# ==========================================================
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+hook_add = '''
+source ~/dotfiles/vim/rc/plugins/open-browser.rc.vim
+'''
+
+
+# ==========================================================
+# gui
+# ==========================================================
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+
+# ==========================================================
+# powerline
+# ==========================================================
+
+# [[plugins]]
+# repo = 'majutsushi/tagbar'
+
+# [[plugins]]
+# repo = 'tpope/vim-fugitive'
+
+# [[plugins]]
+# repo = 'vim-airline/vim-airline'
+# depends = ['tagbar', 'vim-fugitive']
+# hook_add = '''
+# source ~/dotfiles/vim/rc/plugins/airline.rc.vim
+# '''
+
+# [[plugins]]
+# repo = 'vim-airline/vim-airline-themes'
+# depends = 'vim-airline'
+# hook_add = '''
+# let g:airline_theme='luna'
+# '''
+
+# [[plugins]]
+# repo = 'gcmt/taboo.vim'
+# depends = 'vim-airline'
+# hook_add = '''
+# "set guioptions-=e
+# "set sessionoptions+=tabpages,globals
+# let g:taboo_tab_format=' %N %f%m %w '
+# '''
+
+
+# ==========================================================
+# terminal
+# ==========================================================
+
+[[plugins]]
+repo = 'kassio/neoterm'
+if = "has('nvim')"
+hook_add = '''
+source ~/dotfiles/vim/rc/plugins/neoterm.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/vimshell'
+if = "!has('nvim')"
+hook_add = '''
+source ~/dotfiles/vim/rc/plugins/vimshell.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+if = "!has('nvim')"
+build = 'make'
+on_source = ['unite.vim', 'vimshell.vim']
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
