@@ -14,8 +14,8 @@ function M.setup(wezterm, config)
   -- config.font = wezterm.font(FONT_NAME)
 
   -- 初期ウィンドウサイズ、フォントサイズ、カラースキームの設定
-  config.initial_cols = 120
-  config.initial_rows = 25
+  config.initial_cols = 150
+  config.initial_rows = 30
   config.font_size = 10.0
 
   -- IMEを有効にする（現在はデフォルトでtrue？）
@@ -99,7 +99,7 @@ function M.setup(wezterm, config)
   --   brightness = 0.05,
   -- }
 
-  config.window_background_opacity = 0.75   -- ウィンドウを透過させる (1.0で不透過）
+  config.window_background_opacity = 0.80   -- ウィンドウを透過させる (1.0で不透過）
   config.macos_window_background_blur = 10  -- ウィンドウの背景をぼかす（macOSのみ）
 
   -- インアクティブなペーンの色

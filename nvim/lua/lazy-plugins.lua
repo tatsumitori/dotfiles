@@ -90,29 +90,9 @@ require("lazy").setup({
     end,
   },
 
-  -- require 'config.plugins.gitsigns',
-
-  -- require 'config.plugins.which-key',
-
-  require("config.plugins.telescope"),
-
-  require("config.plugins.lspconfig"),
-
   -- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
   -- treesitter, mason and typescript.nvim. So instead of the above, you can use:
   { import = "lazyvim.plugins.extras.lang.typescript" },
-
-  -- require 'config.plugins.conform',
-
-  -- require 'config.plugins.blink-cmp',
-
-  -- require 'config.plugins.tokyonight',
-
-  -- require 'config.plugins.todo-comments',
-
-  -- require 'config.plugins.mini',
-
-  require("config.plugins.treesitter"),
 
   -- the opts function can also be used to change the default opts:
   {

@@ -12,10 +12,7 @@ See `:help mapleader`
 -- vim.g.have_nerd_font = false
 
 -- [[ Install `lazy.nvim` plugin manager ]]
-require("config.lazy-bootstrap")
-
--- [[ Configure and install plugins ]]
-require("config.plugins")
+require("lazy-bootstrap")
 
 -- [[ Setting options ]]
 require("config.options")
@@ -25,6 +22,9 @@ require("config.keymaps")
 
 -- [[ Basic Autocommands ]]
 require("config.autocmds")
+
+-- [[ Configure and install plugins ]]
+require("lazy-plugins")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

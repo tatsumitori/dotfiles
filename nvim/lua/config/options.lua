@@ -155,10 +155,10 @@ vim.o.smartcase = true
 -- サインカラムの有効化
 vim.o.signcolumn = "yes"
 
--- -- Decrease update time
--- -- スワップファイルの更新時間
--- vim.o.updatetime = 250
---
+-- Decrease update time
+-- スワップファイルの更新時間
+vim.o.updatetime = 5000
+
 -- -- Decrease mapped sequence wait time
 -- -- キーマッピングシーケンスの待ち時間
 -- vim.o.timeoutlen = 300
@@ -173,7 +173,7 @@ vim.o.signcolumn = "yes"
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
---
+
 --  Notice listchars is set using `vim.opt` instead of `vim.o`.
 --  It is very similar to `vim.o` but offers an interface for conveniently interacting with tables.
 --   See `:help lua-options`
