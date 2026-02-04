@@ -2,6 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- [[ Basic Keymaps ]]
+--  See `:help vim.keymap.set()`
+
 --- キーマップ関連(vim) ---
 -- 再割当無し : 再割当て有り : モード
 -- noremap    : map  : ノーマルモード＋ビジュアルモード
@@ -10,9 +13,6 @@
 -- vnoremap   : vmap : ビジュアル(選択)モード
 -- cnoremap   : cmap : コマンドラインモード
 -- inoremap   : imap : インサート(挿入)モード
-
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
