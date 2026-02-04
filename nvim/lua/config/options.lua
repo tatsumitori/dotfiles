@@ -17,12 +17,14 @@ vim.o.helplang = "ja"
 
 --- NOTE: 以下、一旦コメントアウト
 
--- -- [File]
--- -- -- エンコーディングをUTF-8に設定
--- -- vim.o.fileencoding = 'utf-8'
--- -- -- ファイルフォーマットをunixに設定
--- -- vim.o.fileformat = 'unix'
---
+-- [File]
+-- エンコーディングをUTF-8に設定
+vim.o.fileencoding = "utf-8"
+-- 既存ファイルの文字コード判別順設定
+vim.opt.fileencodings = { "ucs-bom", "utf-8", "utf-16", "sjis", "cp932", "euc-jp", "default", "latin1" }
+-- -- ファイルフォーマットをunixに設定
+-- vim.o.fileformat = "unix"
+
 -- -- 編集中のファイルが変更されたら自動で読み直す
 -- vim.o.autoread = true
 -- -- バッファが編集中でもその他のファイルを開けるように
@@ -31,15 +33,15 @@ vim.o.helplang = "ja"
 -- -- vim.o.showcmd = true
 -- 折り返さない
 vim.o.wrap = false
--- -- ウィンドウサイズの指定
--- vim.o.columns = 120
--- vim.o.lines = 25
--- ウィンドウ位置の指定
--- vim.o.winpos = { 150, 150 }
---
+-- ウィンドウサイズの指定
+vim.o.columns = 150
+vim.o.lines = 35
+-- -- ウィンドウ位置の指定
+-- vim.opt.winpos = { 150, 150 }
+
 -- -- スワップファイルを作成しない
 -- -- vim.o.swapfile = false
---
+
 -- -- [Visual]
 -- -- ルーラの表示
 -- vim.o.ruler = true
@@ -65,7 +67,7 @@ vim.o.cursorcolumn = true
 -- -- highlight clear CursorLine
 -- -- highlight CursorLine gui=underline
 -- -- highlight CursorLine cterm=underline,reverse ctermbg=darkgray
---
+
 -- -- 行末の1文字先までカーソルを移動できるように
 -- vim.o.virtualedit = "onemore"
 -- -- -- インデントはスマートインデント
@@ -183,6 +185,7 @@ vim.o.updatetime = 5000
 vim.o.list = true
 -- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.listchars = { tab = "»-»", trail = "-", eol = "~", extends = "<", precedes = ">", nbsp = "%" }
+-- vim.opt.fillchars = { diff = "╱", eob = " ", fold = " ", foldclose = "", foldopen = "", foldsep = " " }
 
 -- -- Preview substitutions live, as you type!
 -- -- コマンド結果のプレビュー(split=分割)
