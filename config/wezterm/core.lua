@@ -15,7 +15,7 @@ function M.setup(wezterm, config)
 
   -- 初期ウィンドウサイズ、フォントサイズ、カラースキームの設定
   config.initial_cols = 150
-  config.initial_rows = 30
+  config.initial_rows = 35
   config.font_size = 10.0
 
   -- IMEを有効にする（現在はデフォルトでtrue？）

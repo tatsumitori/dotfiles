@@ -21,4 +21,49 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+-- カラースキーム変更時に自動保存
+vim.api.nvim_create_autocmd("ColorScheme", {
+  desc = "Save colorscheme selection for next session",
+  group = vim.api.nvim_create_augroup("colorscheme-persist", { clear = true }),
+  callback = function()
+    local colorscheme = vim.g.colors_name
+    if colorscheme then
+      local cache_dir = vim.fn.stdpath("cache")
+      local colorscheme_file = cache_dir .. "/colorscheme.txt"
+      local file = io.open(colorscheme_file, "w")
+      if file then
+        file:write(colorscheme)
+        file:close()
+      end
+    end
+  end,
+})
+
+-- 保存されたカラースキームを読み込む
+local function load_colorscheme()
+  local cache_dir = vim.fn.stdpath("cache")
+  local colorscheme_file = cache_dir .. "/colorscheme.txt"
+  local file = io.open(colorscheme_file, "r")
+
+  if file then
+    local saved_colorscheme = file:read("*a")
+    file:close()
+    -- 改行を除去
+    saved_colorscheme = saved_colorscheme:gsub("\n", "")
+
+    -- カラースキームを適用（エラーハンドリング付き）
+    local ok = pcall(vim.cmd.colorscheme, saved_colorscheme)
+    if not ok then
+      -- 失敗したらデフォルトのカラースキームを使用
+      vim.cmd.colorscheme("default")
+    end
+  else
+    -- ファイルがなければデフォルトを使用
+    vim.cmd.colorscheme("default")
+  end
+end
+
+-- Neovim起動時に実行
+load_colorscheme()
+
 -- vim: ts=2 sts=2 sw=2 et
