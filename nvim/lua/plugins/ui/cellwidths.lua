@@ -1,3 +1,4 @@
+-- 日本語等マルチバイト文字をsigleでも正常に表示できるよう設定する
 -- Help :h cellwidths
 return {
   {

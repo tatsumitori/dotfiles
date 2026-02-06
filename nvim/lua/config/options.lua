@@ -31,8 +31,8 @@ vim.opt.fileencodings = { "ucs-bom", "utf-8", "utf-16", "sjis", "cp932", "euc-jp
 -- vim.o.hidden = true
 -- -- -- 入力中のコマンドをステータスに表示する
 -- -- vim.o.showcmd = true
--- 折り返さない
-vim.o.wrap = false
+-- -- 折り返さない
+-- vim.o.wrap = false
 -- ウィンドウサイズの指定
 vim.o.columns = 150
 vim.o.lines = 35
@@ -191,11 +191,11 @@ vim.opt.listchars = { tab = "»-»", trail = "-", eol = "~", extends = "<", prec
 -- -- コマンド結果のプレビュー(split=分割)
 -- vim.o.inccommand = "split"
 
--- Minimal number of screen lines to keep above and below the cursor.
--- カーソルの上下に表示する行数の設定
-vim.o.scrolloff = 25
--- カーソルの左右に表示する列数の設定
-vim.o.sidescrolloff = 100
+-- -- Minimal number of screen lines to keep above and below the cursor.
+-- -- カーソルの上下に表示する行数の設定
+-- vim.o.scrolloff = 25
+-- -- カーソルの左右に表示する列数の設定
+-- vim.o.sidescrolloff = 100
 
 -- -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- -- instead raise a dialog asking if you wish to save the current file(s)

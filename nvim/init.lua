@@ -14,6 +14,12 @@ See `:help mapleader`
 -- Nerd Fontがインストールされ、ターミナルで選択されている場合はtrueに設定します
 vim.g.have_nerd_font = false
 
+if vim.fn.has("win32") == 1 then
+  vim.cmd([[echo serverstart('\\.\pipe\nvim-koh')]])
+else
+  vim.cmd([[echo serverstart('nvim-koh')]])
+end
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 require("config.lazy")
 
