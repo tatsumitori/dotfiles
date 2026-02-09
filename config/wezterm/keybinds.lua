@@ -1,5 +1,5 @@
--- ƒL[ƒoƒCƒ“ƒh‚ğ•\¦‚·‚éiwezterm show-keysj
--- SUPER‚ÍWindows‚È‚çWindowsƒL[AMac‚È‚çcommandƒL[‚ÅAALT‚ÍWindows‚È‚çaltƒL[‚ÅMac‚È‚çoptionƒL[
+-- ã‚­ãƒ¼ãƒã‚¤ãƒ³ãƒ‰ã‚’è¡¨ç¤ºã™ã‚‹ï¼ˆwezterm show-keysï¼‰
+-- SUPERã¯Windowsãªã‚‰Windowsã‚­ãƒ¼ã€Macãªã‚‰commandã‚­ãƒ¼ã§ã€ALTã¯Windowsãªã‚‰altã‚­ãƒ¼ã§Macãªã‚‰optionã‚­ãƒ¼
 
 local M = {}
 
@@ -7,17 +7,17 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 
 function M.setup(wezterm, config)
-	-- ƒfƒtƒHƒ‹ƒg‚ÌƒL[ƒoƒCƒ“ƒh‚ğ–³Œø‰»
+	-- ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ã‚­ãƒ¼ãƒã‚¤ãƒ³ãƒ‰ã‚’ç„¡åŠ¹åŒ–
 	config.disable_default_key_bindings = true
 
-	-- leaderƒL[‚Ìİ’è(ƒfƒtƒHƒ‹ƒg‚Å‚ÍControl+a)
+	-- leaderã‚­ãƒ¼ã®è¨­å®š(ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ã¯Control+a)
 	config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 2000 }
 
 	config.keys = {
 		{ key = "Tab", mods = "CTRL", action = act.ActivateTabRelative(1) },
 		{ key = "Tab", mods = "SHIFT|CTRL", action = act.ActivateTabRelative(-1) },
 		{ key = "Enter", mods = "ALT", action = act.ToggleFullScreen },
-		-- { key = "Enter", mods = "SHIFT", action = act{SendString="\x1b\r"}},  -- Claude Code ‚Å‚Ì•¡”s“ü—Í‚Ì‚½‚ßAShift + Enter ‚Å‰üsƒV[ƒPƒ“ƒX‚ğ‘—M
+		-- { key = "Enter", mods = "SHIFT", action = act{SendString="\x1b\r"}},  -- Claude Code ã§ã®è¤‡æ•°è¡Œå…¥åŠ›ã®ãŸã‚ã€Shift + Enter ã§æ”¹è¡Œã‚·ãƒ¼ã‚±ãƒ³ã‚¹ã‚’é€ä¿¡
 		-- { key = '\"', mods = 'ALT|CTRL', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
 		-- { key = '\"', mods = 'SHIFT|ALT|CTRL', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } },
 		-- { key = '%', mods = 'ALT|CTRL', action = act.SplitHorizontal{ domain =  'CurrentPaneDomain' } },
