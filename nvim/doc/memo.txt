@@ -1,7 +1,7 @@
 ================================================================================
-INTRODUCTION                                                  *kickstart.nvim*
+INTRODUCTION                                                            *memo*
 
-Kickstart.nvim is a project to help you get started on your neovim journey.
+helpで検索可能なメモファイルを作成
 
                                                             *kickstart-is-not*
 It is not:
