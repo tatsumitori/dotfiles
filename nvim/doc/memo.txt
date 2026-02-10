@@ -3,12 +3,19 @@ INTRODUCTION                                                            *memo*
 
 helpで検索可能なメモファイルを作成
 
-                                                            *kickstart-is-not*
-It is not:
-- Complete framework for every plugin under the sun
-- Place to add every plugin that could ever be useful
+LSP（LanguageServer Protocol）                                           *LSP*
+- LSPは、テキストエディタや統合開発環境（IDE）と
+- プログラミング言語の開発ツールをつなぐための標準プロトコルです。
+- LSPを使うことで、エディタやIDEがコード補完、シンタックスハイライト、
+- エラーチェック、リファクタリング等の機能を簡単に提供できるようになります。
 
-                                                                *kickstart-is*
+                                                                *DAP*
+                                                                *Linter*
+                                                                *Formatter*
+
+
+
+"testmessage"
 It is:
 - Somewhere that has a good start for the most common "IDE" type features:
     - autocompletion

@@ -154,7 +154,7 @@ vim.o.smartcase = true
 -- vim.o.undofile = true
 
 -- Keep signcolumn on by default
--- サインカラムの有効化
+-- サインカラムの有効化(行番号の隣、記号の列)
 vim.o.signcolumn = "yes"
 
 -- Decrease update time
