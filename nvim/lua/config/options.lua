@@ -21,7 +21,7 @@ vim.o.helplang = "ja"
 -- エンコーディングをUTF-8に設定
 vim.o.fileencoding = "utf-8"
 -- 既存ファイルの文字コード判別順設定
-vim.opt.fileencodings = { "ucs-bom", "utf-8", "utf-16", "sjis", "cp932", "euc-jp", "default", "latin1" }
+vim.opt.fileencodings = { "ucs-bom", "utf-8", "sjis", "cp932", "utf-16", "euc-jp", "default", "latin1" }
 -- -- ファイルフォーマットをunixに設定
 -- vim.o.fileformat = "unix"
 

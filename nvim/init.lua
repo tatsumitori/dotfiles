@@ -12,7 +12,7 @@ See `:help mapleader`
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 -- Nerd Fontがインストールされ、ターミナルで選択されている場合はtrueに設定します
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 if vim.fn.has("win32") == 1 then
   vim.cmd([[echo serverstart('\\.\pipe\nvim-koh')]])
