@@ -9,6 +9,7 @@ return {
 
   { import = "plugins.color-scheme" },
   { import = "plugins.doc" },
+  { import = "plugins.language" },
   { import = "plugins.ui" },
   { import = "plugins.utility" },
 }
