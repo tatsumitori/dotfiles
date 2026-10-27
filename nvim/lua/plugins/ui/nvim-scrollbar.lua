@@ -1,6 +1,7 @@
 -- スクロールバー
 return {
   "petertriho/nvim-scrollbar",
+  -- branch = "v1",
   lazy = true,
   event = {
     "BufReadPre",
